@@ -1,0 +1,26 @@
+{
+	"name": "units",
+	"version": "0.0.1",
+	"description": "Module-like system with two step initialization",
+	"keywords": ["module", "init"],
+	"author": {
+		"name": "Dmitry Smolin",
+		"email": "dimsmol@gmail.com"
+	},
+	"preferGlobal": false,
+	"private": false,
+	"dependencies": {
+		"nerr": "~0.0.1"
+	},
+	"engines": {
+		"node": "~0.6.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dimsmol/units"
+	},
+	"directories": {
+		"lib": "./lib"
+	},
+	"main": "./lib/index"
+}
