@@ -9,14 +9,6 @@ Units provides an ability to add number of component instances to a set and then
 ```js
 var units = new UnitSet();
 
-units.add('db', new Db(someDbArgs));
-units.add('settings', new Settings('/path/to/project/root/or/something'));
-units.add('logic.a', new LogicA());
-units.add('logic.b', new LogicB());
-units.add('facade', new Facade());
-
-units.init(); // calls unitInit() function of every unit internally
-
 var LogicA = function () {
 };
 
@@ -26,6 +18,14 @@ LogicA.prototype.unitInit = function (units) {
 	this.db = units.require('db');
 	this.logicB = units.require('logic.b');
 };
+
+units.add('db', new Db(someDbArgs));
+units.add('settings', new Settings('/path/to/project/root/or/something'));
+units.add('logic.a', new LogicA());
+units.add('logic.b', new LogicB());
+units.add('facade', new Facade());
+
+units.init(); // calls unitInit() function of every unit internally
 ```
 
 ## Parent units
