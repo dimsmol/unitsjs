@@ -4,6 +4,8 @@ Module-like system with two step initialization.
 
 Units provides an ability to add number of component instances to a set and then call init function on each of them with guarantee that all other components are instantiated.
 
+Can also be used on client side using [browserify](https://github.com/substack/node-browserify) or similar tool.
+
 ## Example
 
 ```js
