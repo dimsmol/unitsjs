@@ -55,6 +55,7 @@ childUnits.get('db'); // will try to find 'db' in childUnits, then in units
 * expose(key, obj) - like add(key, obj), but unitInit() will not be called on this unit (so, unit may omit unitInit() implementation), used to expose constant or any object without unitInit() method as a unit
 * addInitRequired(key, unit) - like add(key, obj), but will ensure that unitInit() is called on that unit when it's being got by get() or require(), for units that are unusable unless inited
 * addSet(key, units) - makes units child UnitSet, adds all child units to itself under key specified
+	* units has a unit with key '~', it will be added directly under key specified, instead of key+'.~'
 * joinSet(units) - add all units of UnitSet specified to self, without any extra magic
 * get(key) - gets unit under key specified, tries parent if no unit found and parent is present, takes into account aliases
 * require(key) - calls get() internally and returns result if not null, otherwise throws an error
