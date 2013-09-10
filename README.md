@@ -66,3 +66,7 @@ childUnits.get('db'); // will try to find 'db' in childUnits, then in units
 Unit class is actually an interface.
 You can inherit it to make obvious that your subclass is Unit.
 But you can also just implement unitInit() without inheriting Unit.
+
+## License
+
+MIT
